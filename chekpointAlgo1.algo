@@ -1,0 +1,17 @@
+ALGORITHM checkpointAlgo1
+VAR
+   tab1 : ARRAY_OF INTEGER[5];
+   tab2 : ARRAY_OF INTEGER[5];
+      i,j,somme_distinct,somme_meme: INTEGER;
+   BEGIN
+      FOR i FROM 0 TO tab1.length-1 DO
+       FOR j FROM 0 TO tab2.length-1  DO
+           IF (tab1[i]=tab2[i]) THEN
+           somme_meme=somme_meme+2*tab1[i];
+           ELSE somme_distinct=somme_distinct+2*tab1[j];
+       END_FOR
+      
+    END_FOR
+ write(somme_distinct);
+ write(somme_meme);
+END
